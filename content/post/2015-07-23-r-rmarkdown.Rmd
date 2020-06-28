@@ -3,12 +3,19 @@ title: "Hello Blogdown Website"
 author: "Thomas Michem"
 date: 2020-06-28T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "brand", "regression"]
+tags: ["R Markdown", "brand", "blogdown"]
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 ```
+
+
+# Blogdown
+
+As one of the main languages I work with is R, why not build the whole website in R? Thanks to the fantastic work of Yihui Yue, author of the blogdown library and the standard work. 
+
+The resource used to get started is the blogpost <https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/>. 
 
 # R Markdown
 
@@ -22,8 +29,6 @@ fit <- lm(dist ~ speed, data = cars)
 fit
 ```
 
-# Including Plots
-
 You can also embed plots. See Figure \@ref(fig:pie) for example:
 
 ```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
@@ -35,3 +40,9 @@ pie(
   init.angle = -50, border = NA
 )
 ```
+
+# Deploying 
+
+The website is deployed on DigitalOcean.
+
+To get $100 free credit use this referral link: <https://m.do.co/c/82d961531b3a>. 
