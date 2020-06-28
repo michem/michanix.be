@@ -13,10 +13,10 @@
     
     <item>
       <title>Hello Blogdown Website</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/2020-06-28-blogdown_site/</link>
       <pubDate>Sun, 28 Jun 2020 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2020-06-28-blogdown_site/</guid>
       <description>BlogdownAs one of the main languages I work with is R, why not build the whole website in R?</description>
     </item>
     
