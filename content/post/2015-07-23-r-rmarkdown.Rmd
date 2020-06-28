@@ -45,4 +45,8 @@ pie(
 
 The website is deployed on DigitalOcean. To get up and running quickly with blogdown, I used the article by Colin Quirk: <https://colinquirk.com/blogdown-on-digitalocean/>.
 
+Added https using <https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04>.
+
 To get $100 free credit use this referral link: <https://m.do.co/c/82d961531b3a>. 
+
+The site is linked to github and updates every hour using cron.
