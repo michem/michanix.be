@@ -43,6 +43,6 @@ pie(
 
 # Deploying 
 
-The website is deployed on DigitalOcean.
+The website is deployed on DigitalOcean. To get up and running quickly with blogdown, I used the article by Colin Quirk: <https://colinquirk.com/blogdown-on-digitalocean/>.
 
 To get $100 free credit use this referral link: <https://m.do.co/c/82d961531b3a>. 
