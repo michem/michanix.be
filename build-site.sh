@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/colin/colinquirk.com
+cd /srv/michanix.be
 git pull
 Rscript -e 'blogdown::build_site()'
-cp -r public/. /var/www/colinquirk.com/html/
+cp -r public/. /var/www/michanix.be/html/
