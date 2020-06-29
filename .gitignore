@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 blogdown
+public/*
 public/
+public
