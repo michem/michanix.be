@@ -6,13 +6,13 @@ aliases = ["nownownow", "doing"]
 author = "Thomas Michem"
 +++
 
-# Enjoying Life
+### Enjoying Life
 - Being a father for Mila (5) and Rubi (1)  
 - Creating a home with Trees  
 - Living in De Pinte  
 - Keeping a small bubble with family & loved ones  
 
-# Building my own company MichaniX
+### Building my own company MichaniX
 - Assisting startups with data & tech challenges
 - Building an R training programme (RStudio Instructor for Tidyverse and Shiny)
 - Looking into passive income options
