@@ -70,3 +70,9 @@ url = "mailto:thomas.michem@michanix.be"
   weight = 300
   identifier = "about"
   url = "/about/"
+  
+  [[menu.main]]
+  name = "Now"
+  weight = 300
+  identifier = "now"
+  url = "/now/"
