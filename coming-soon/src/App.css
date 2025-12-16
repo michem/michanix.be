@@ -154,7 +154,7 @@
 }
 
 .logo {
-  max-width: 450px;
+  max-width: 600px;
   width: 100%;
   height: auto;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
@@ -410,7 +410,7 @@
   }
 
   .logo {
-    max-width: 320px;
+    max-width: 90%;
   }
 
   .title {

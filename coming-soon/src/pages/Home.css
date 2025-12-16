@@ -1,0 +1,343 @@
+/* Home Page Styles */
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background (inherited from original) */
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  transition: transform 0.3s ease-out;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #3d9ba8 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #5bc4d4 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(20px, 30px) scale(1.02); }
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(61, 155, 168, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 155, 168, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #f8fafb;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, #3d9ba8 0%, #5bc4d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(248, 250, 251, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3d9ba8 0%, #2d7a85 100%);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(61, 155, 168, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #f8fafb;
+  border: 2px solid rgba(61, 155, 168, 0.5);
+}
+
+.btn-secondary:hover {
+  border-color: #3d9ba8;
+  background: rgba(61, 155, 168, 0.1);
+}
+
+.btn-large {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Section Container */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8fafb;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Services Section */
+.services {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 0;
+  background: rgba(26, 47, 58, 0.5);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(61, 155, 168, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(61, 155, 168, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(61, 155, 168, 0.2), rgba(91, 196, 212, 0.2));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: #5bc4d4;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafb;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: rgba(248, 250, 251, 0.7);
+  line-height: 1.7;
+}
+
+/* Philosophy Teaser */
+.philosophy-teaser {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 0;
+}
+
+.philosophy-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8fafb;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-lead {
+  font-size: 1.5rem;
+  color: #5bc4d4;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-content p {
+  color: rgba(248, 250, 251, 0.7);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5bc4d4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+
+.link-arrow:hover {
+  gap: 0.75rem;
+}
+
+.link-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* CTA Section */
+.home-cta {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(180deg, transparent, rgba(61, 155, 168, 0.1));
+}
+
+.home-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8fafb;
+  margin-bottom: 1rem;
+}
+
+.home-cta p {
+  color: rgba(248, 250, 251, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Gear decoration */
+.gear {
+  position: fixed;
+  color: rgba(61, 155, 168, 0.05);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gear svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gear-1 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -100px;
+  animation: rotateCW 60s linear infinite;
+}
+
+@keyframes rotateCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .philosophy-content h2 {
+    font-size: 2rem;
+  }
+
+  .philosophy-lead {
+    font-size: 1.25rem;
+  }
+}
