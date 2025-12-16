@@ -64,7 +64,7 @@ function App() {
       {/* Main content */}
       <main className="content">
         <div className="logo-container">
-          <img src="/images/michanix.jpg" alt="MichaniX Logo" className="logo" />
+          <img src="/images/michanix-logo.png" alt="MichaniX Logo" className="logo" />
         </div>
 
         <div className="text-content">
