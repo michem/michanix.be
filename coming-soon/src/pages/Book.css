@@ -1,0 +1,183 @@
+/* Book Page Styles */
+.book-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2f3a 0%, #2d4a5e 50%, #1a2f3a 100%);
+}
+
+.page-header {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(61, 155, 168, 0.2);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f8fafb;
+  margin-bottom: 1rem;
+}
+
+.page-intro {
+  font-size: 1.25rem;
+  color: rgba(248, 250, 251, 0.7);
+}
+
+/* Book Content */
+.book-content {
+  padding: 3rem 0 6rem;
+}
+
+.book-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Info Section */
+.book-info h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #f8fafb;
+  margin-bottom: 1rem;
+}
+
+.book-info > p {
+  color: rgba(248, 250, 251, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.expect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.expect-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.expect-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, rgba(61, 155, 168, 0.2), rgba(91, 196, 212, 0.2));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expect-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #5bc4d4;
+}
+
+.expect-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f8fafb;
+  margin-bottom: 0.25rem;
+}
+
+.expect-item p {
+  color: rgba(248, 250, 251, 0.6);
+  font-size: 0.95rem;
+}
+
+.topics-section {
+  background: rgba(61, 155, 168, 0.05);
+  border: 1px solid rgba(61, 155, 168, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.topics-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5bc4d4;
+  margin-bottom: 1rem;
+}
+
+.topics-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics-section li {
+  color: rgba(248, 250, 251, 0.7);
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.topics-section li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 5px;
+  height: 5px;
+  background: #5bc4d4;
+  border-radius: 50%;
+}
+
+/* Calendly Section */
+.calendly-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(61, 155, 168, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.calendly-inline-widget {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.calendly-fallback {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(248, 250, 251, 0.5);
+}
+
+.calendly-fallback a {
+  color: #5bc4d4;
+  text-decoration: none;
+}
+
+.calendly-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .book-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendly-section {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+}
