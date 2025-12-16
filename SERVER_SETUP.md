@@ -2,6 +2,8 @@
 
 This guide walks you through setting up the staging environment on your DigitalOcean server.
 
+**Note:** The React app is pre-built and committed to the repository. No Node.js required on server.
+
 ## Prerequisites
 
 - SSH access to `root@161.35.156.3`
@@ -25,48 +27,35 @@ This will point `staging.michanix.be` to your server.
 
 ## Step 2: Server Setup
 
-SSH into your server and run these commands:
+SSH into your server:
 
 ```bash
 ssh root@161.35.156.3
 ```
 
-### 2.1 Install Node.js (required for React build)
-
-```bash
-# Install Node.js 20.x (LTS)
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Verify installation
-node --version
-npm --version
-```
-
-### 2.2 Create directories
+### 2.1 Create directories
 
 ```bash
 # Create staging web root
 sudo mkdir -p /var/www/staging.michanix.be/html
 sudo chown -R root:root /var/www/staging.michanix.be/html
 sudo chmod -R 755 /var/www/staging.michanix.be
+```
 
-# Clone repository for staging
+### 2.2 Clone repository for staging
+
+```bash
 cd /srv
 git clone https://github.com/michem/michanix.be.git michanix.be-staging
 cd michanix.be-staging
 git checkout develop
 ```
 
-### 2.3 Test build
+### 2.3 Deploy the pre-built site
 
 ```bash
-cd /srv/michanix.be-staging/coming-soon
-npm install
-npm run build
-
-# Copy to web root
-cp -r dist/. /var/www/staging.michanix.be/html/
+# Copy pre-built files to web root
+cp -r /srv/michanix.be-staging/coming-soon/dist/. /var/www/staging.michanix.be/html/
 ```
 
 ---
@@ -156,7 +145,7 @@ bash /srv/michanix.be-staging/build-staging.sh
 crontab -e
 ```
 
-Add this line (builds staging every 30 minutes):
+Add this line (deploys staging every 30 minutes):
 
 ```cron
 30 * * * * /srv/michanix.be-staging/build-staging.sh >> /var/log/staging-build.log 2>&1
@@ -215,22 +204,25 @@ After completing these steps:
 
 ### Workflow
 
-1. Push changes to `develop` branch → appears on staging within 30 min
-2. Review at https://staging.michanix.be
-3. Create PR from `develop` → `main`
-4. Merge → goes live on production within 1 hour
+1. Make changes to React app locally in `coming-soon/`
+2. Build locally: `cd coming-soon && npm run build`
+3. Commit the `dist/` folder
+4. Push to `develop` branch → appears on staging within 30 min
+5. Review at https://staging.michanix.be
+6. Create PR from `develop` → `main`
+7. Merge → goes live on production within 1 hour
 
 ---
 
 ## Troubleshooting
 
-### Check build logs
+### Check deploy logs
 
 ```bash
 tail -f /var/log/staging-build.log
 ```
 
-### Manual rebuild
+### Manual deploy
 
 ```bash
 cd /srv/michanix.be-staging
