@@ -1,113 +1,139 @@
-/* Book Page Styles */
+/**
+ * Book Page Styles
+ * Light solarized theme - consultation booking
+ */
+
+/* ═══════════════════════════════════════════════════════════
+   PAGE CONTAINER
+   ═══════════════════════════════════════════════════════════ */
+
 .book-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a2f3a 0%, #2d4a5e 50%, #1a2f3a 100%);
+  background: var(--base-00);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   PAGE HEADER
+   ═══════════════════════════════════════════════════════════ */
+
 .page-header {
-  padding: 4rem 0 3rem;
+  padding: var(--space-16) 0 var(--space-10);
   text-align: center;
-  border-bottom: 1px solid rgba(61, 155, 168, 0.2);
+  border-bottom: 1px solid var(--base-02);
+  background: var(--base-01);
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-6);
 }
 
 .page-header h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #f8fafb;
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-normal);
+  color: var(--content-00);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
 }
 
 .page-intro {
-  font-size: 1.25rem;
-  color: rgba(248, 250, 251, 0.7);
+  font-size: var(--text-lg);
+  color: var(--content-01);
 }
 
-/* Book Content */
+/* ═══════════════════════════════════════════════════════════
+   BOOK CONTENT
+   ═══════════════════════════════════════════════════════════ */
+
 .book-content {
-  padding: 3rem 0 6rem;
+  padding: var(--space-12) 0 var(--space-24);
 }
 
 .book-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: var(--space-12);
   align-items: start;
 }
 
-/* Info Section */
+/* ═══════════════════════════════════════════════════════════
+   INFO SECTION
+   ═══════════════════════════════════════════════════════════ */
+
 .book-info h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #f8fafb;
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--content-00);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
 }
 
 .book-info > p {
-  color: rgba(248, 250, 251, 0.7);
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  color: var(--content-01);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
 }
 
 .expect-list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
 }
 
 .expect-item {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-4);
   align-items: flex-start;
 }
 
 .expect-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, rgba(61, 155, 168, 0.2), rgba(91, 196, 212, 0.2));
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .expect-icon svg {
-  width: 22px;
-  height: 22px;
-  stroke: #5bc4d4;
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent-primary);
 }
 
 .expect-item h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #f8fafb;
-  margin-bottom: 0.25rem;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--content-00);
+  margin-bottom: var(--space-1);
 }
 
 .expect-item p {
-  color: rgba(248, 250, 251, 0.6);
-  font-size: 0.95rem;
+  color: var(--content-02);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
 }
 
 .topics-section {
-  background: rgba(61, 155, 168, 0.05);
-  border: 1px solid rgba(61, 155, 168, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
+  background: var(--base-01);
+  border: 1px solid var(--base-02);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
 }
 
 .topics-section h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #5bc4d4;
-  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--accent-primary);
+  margin-bottom: var(--space-4);
 }
 
 .topics-section ul {
@@ -117,11 +143,11 @@
 }
 
 .topics-section li {
-  color: rgba(248, 250, 251, 0.7);
-  padding-left: 1.25rem;
+  color: var(--content-01);
+  padding-left: var(--space-5);
   position: relative;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-relaxed);
 }
 
 .topics-section li::before {
@@ -131,41 +157,50 @@
   top: 0.55rem;
   width: 5px;
   height: 5px;
-  background: #5bc4d4;
+  background: var(--accent-primary);
   border-radius: 50%;
 }
 
-/* Calendly Section */
+/* ═══════════════════════════════════════════════════════════
+   CALENDLY SECTION
+   ═══════════════════════════════════════════════════════════ */
+
 .calendly-section {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(61, 155, 168, 0.2);
-  border-radius: 16px;
-  padding: 1.5rem;
+  background: var(--base-00);
+  border: 1px solid var(--base-02);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .calendly-inline-widget {
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
 .calendly-fallback {
   text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: rgba(248, 250, 251, 0.5);
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--content-02);
 }
 
 .calendly-fallback a {
-  color: #5bc4d4;
+  color: var(--accent-primary);
   text-decoration: none;
+  font-weight: var(--weight-medium);
 }
 
 .calendly-fallback a:hover {
   text-decoration: underline;
+  color: var(--accent-hover);
 }
 
-/* Responsive */
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+
 @media (max-width: 900px) {
   .book-layout {
     grid-template-columns: 1fr;
@@ -177,7 +212,11 @@
 }
 
 @media (max-width: 768px) {
+  .page-header {
+    padding: var(--space-12) 0 var(--space-8);
+  }
+
   .page-header h1 {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
   }
 }
